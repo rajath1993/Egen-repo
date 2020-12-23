@@ -10,7 +10,10 @@ public class RoomDimension {
 		this.width = width;
 	}
 	
-	
+	public RoomDimension(RoomDimension size) {
+		setLength(size.length);
+		setWidth(size.width);
+	}
 	
 	public double getLength() {
 		return length;

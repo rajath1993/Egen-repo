@@ -3,8 +3,16 @@ package carpetcompany;
 public class RoomCarpet extends RoomDimension{
 	private double costPerSqFt;
 	
-	public RoomCarpet(double length,double width,double costPerSqFt) {
-		super(length,width);
+	public double getCostPerSqFt() {
+		return costPerSqFt;
+	}
+
+	public void setCostPerSqFt(double costPerSqFt) {
+		this.costPerSqFt = costPerSqFt;
+	}
+
+	public RoomCarpet(RoomDimension size,double costPerSqFt) {
+		super(size);
 		this.costPerSqFt = costPerSqFt;
 	}
 	

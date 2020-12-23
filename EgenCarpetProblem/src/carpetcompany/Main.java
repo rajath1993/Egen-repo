@@ -20,10 +20,16 @@ public class Main {
 		System.out.println("Enter the width of the room: ");
 		double width = reader.nextDouble();
 		
-		System.out.println("Enter the price per square foot");
-		double cost = reader.nextDouble();
+		double cost = 0.0;
 		
-		RoomCarpet roomCarpet = new RoomCarpet(length,width,cost);
+		System.out.println("Select the type of Carpet: 1-Frieze, 2-Loop, 3-Pyra, 4-Cora");
+		String type = reader.next();
+		CarpetType ctype = new CarpetType();
+		cost = ctype.getCarpetType(type.toLowerCase());
+		
+		reader.close();
+		RoomDimension roomDimension = new RoomDimension(length,width);
+		RoomCarpet roomCarpet = new RoomCarpet(roomDimension,cost);
 		
 		System.out.println("Total Cost: "+roomCarpet.calcTotalCost());
 	}
