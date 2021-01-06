@@ -92,7 +92,7 @@ public class Branch extends Restaurant {
 		String name = sc.next();
 		
 		
-		System.out.print("Enter the street address of the new branch");
+		System.out.println("Enter the street address of the new branch");
 		sc.nextLine();
 		String streetAddress = sc.nextLine();
 		System.out.println("Enter the latitude of the new branch");
@@ -134,9 +134,11 @@ public class Branch extends Restaurant {
 
 	@Override
 	public void printBranches() {
+		System.out.println("+-------------------------------------------------------------------------------------------------------------------------------------------------+");
 		for(Branch b:branches) {
-			System.out.println(b);
+			System.out.println(b.name+"  "+b.location.getStreetAddress()+"  "+b.location.getLatitude()+"  "+b.location.getLongitude()+"   "+b.location.getPhoneNumber());
 		}
+		System.out.println("+-------------------------------------------------------------------------------------------------------------------------------------------------+");
 	}
 	
 	
